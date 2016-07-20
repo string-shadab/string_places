@@ -12,11 +12,10 @@ def load_in_db(request):
 
     file = open(request.POST['file'])
     filedata = file.read()
-    print filedata
    
     city_resource = resources.modelresource_factory(model=Cities)()
     dataset = tablib.Dataset()
     dataset.load(open(request.POST['file']).read())
      
     result = city_resource.import_data(dataset,dry_run=False)
-    return HttpResponse(result) 
+    return HttpResponse('Done..!!') 
