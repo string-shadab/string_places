@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Cities
+from import_export import resources
+
+class CityNames(resources.ModelResource):
+    class Meta:
+        model = Cities

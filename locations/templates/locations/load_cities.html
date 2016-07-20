@@ -1,0 +1,14 @@
+<html>
+    <head>
+
+    </head>
+<body>
+    <form method="POST" action="{% url 'locations:load_in_db'%}" >
+        {% csrf_token %}
+        Choose File:
+        <input type="file" name="file">
+            <br \>
+        <input type="submit" value='submit'>
+    </form>
+</body>
+
